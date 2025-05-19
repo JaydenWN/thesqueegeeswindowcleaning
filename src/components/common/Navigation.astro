@@ -1,0 +1,198 @@
+---
+import { Image } from "astro:assets";
+import NavLink from "@components/common/NavLink.astro";
+import hamburger from "@icons/hamburger.svg";
+import close from "@icons/close.svg";
+import logo from "@icons/logo.svg";
+---
+
+<div class="navbar">
+	<a href="/" class="logo-link">
+		<Image src={logo} alt="website logo" class="logo" />
+	</a>
+	<button class="mobile-nav-controls">
+		<Image
+			src={hamburger}
+			alt="open mobile navigation menu"
+			class="open-btn"
+		/>
+		<Image
+			src={close}
+			alt="close mobile navigation menu"
+			class="close-btn"
+		/>
+	</button>
+	<nav>
+		<NavLink href="/">Home</NavLink>
+		<NavLink href="/services">Services</NavLink>
+		<NavLink href="/about">About</NavLink>
+		<NavLink href="/contact">Contact</NavLink>
+	</nav>
+</div>
+
+<style>
+	.logo-link {
+		display: flex;
+		align-items: center;
+	}
+	.logo {
+		width: auto;
+		height: 38px;
+	}
+	.navbar {
+		display: flex;
+		min-height: 58px;
+		align-items: center;
+		padding: 0px 1em;
+		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: 0px 0px 6px #3030302d;
+		background-color: var(--brand-blue);
+		z-index: 5;
+		box-sizing: border-box;
+	}
+	.mobile-nav-controls {
+		background-color: transparent;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.open-btn {
+		display: block;
+	}
+	.close-btn {
+		display: none;
+		padding-right: 3px;
+	}
+	nav {
+		display: none;
+		position: fixed;
+		background-color: var(--light-blue);
+		box-sizing: border-box;
+		width: 100%;
+		height: calc(100dvh - 58px);
+		top: 58px;
+		left: 0;
+		flex-direction: column;
+		gap: 2em;
+		font-size: 1.6rem;
+		padding: 2em;
+		z-index: 2;
+	}
+
+	@media (min-width: 1024px) {
+		nav {
+			display: flex;
+			position: static;
+			background-color: transparent;
+			flex-direction: row;
+			height: inherit;
+			font-size: 1em;
+			padding: 0px;
+			width: fit-content;
+		}
+		.open-btn {
+			display: none;
+			visibility: hidden;
+		}
+		.navbar {
+			justify-content: space-between;
+			padding: 0px 4em;
+		}
+	}
+</style>
+
+<script>
+	import gsap from "gsap";
+
+	document.addEventListener("astro:page-load", () => {
+		const mobileNav = document.querySelector("nav");
+		const links = mobileNav.querySelectorAll("a");
+		const mobileButton = document.querySelector(".mobile-nav-controls");
+
+		if (window.innerWidth <= 768) {
+			mobileNav.style.display = "none";
+		}
+		mobileButton.addEventListener("click", () => {
+			const currentNavStyle = getComputedStyle(mobileNav);
+			if (currentNavStyle.display == "none") {
+				gsap.fromTo(
+					"nav",
+					{
+						display: "none",
+						autoAlpha: 0,
+					},
+					{
+						display: "flex",
+						autoAlpha: 1,
+					},
+				);
+				gsap.fromTo(
+					links,
+					{
+						x: -50,
+						autoAlpha: 0,
+					},
+					{
+						x: 0,
+						autoAlpha: 1,
+						stagger: 0.1,
+						ease: "power1.in",
+						duration: 0.25,
+					},
+				);
+
+				const btnTl = gsap.timeline();
+
+				btnTl.fromTo(
+					".open-btn",
+					{
+						autoAlpha: 1,
+					},
+					{ autoAlpha: 0 },
+				);
+
+				btnTl.fromTo(
+					".close-btn",
+					{
+						autoAlpha: 0,
+						rotateZ: 360,
+					},
+					{ autoAlpha: 1, rotateZ: 0, display: "block" },
+				);
+			} else {
+				gsap.fromTo(
+					"nav",
+					{
+						display: "flex",
+						autoAlpha: 1,
+					},
+					{
+						display: "none",
+						autoAlpha: 0,
+					},
+				);
+				const btnTl = gsap.timeline();
+
+				btnTl.fromTo(
+					".close-btn",
+					{
+						autoAlpha: 1,
+					},
+					{ autoAlpha: 0, rotateZ: 360, display: "none" },
+				);
+				btnTl.fromTo(
+					".open-btn",
+					{
+						autoAlpha: 0,
+					},
+					{ autoAlpha: 1 },
+				);
+			}
+		});
+	});
+</script>

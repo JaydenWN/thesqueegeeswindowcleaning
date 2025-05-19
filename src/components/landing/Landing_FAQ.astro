@@ -1,0 +1,142 @@
+---
+import carrot from "@icons/carrot.svg";
+import { Image } from "astro:assets";
+import PrimaryButton from "../common/Primary_Button.astro";
+import messageIcon from "@icons/message-tick.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Window Cleaning FAQ</h2>
+        <div class="faq">
+            <details>
+                <span
+                    >Pricing depends on the size of your home or business and
+                    the number of windows. We offer free quotes with no hidden
+                    costs, just honest, upfront pricing for every job.</span
+                >
+                <summary
+                    >How much does window cleaning cost in Mangerton or
+                    Wollongong? <Image src={carrot} alt="dropdown" /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >Yes! We clean everything from suburban homes to large
+                    commercial buildings. Whether you’re a homeowner or business
+                    owner, we’ve got the equipment and experience to make your
+                    windows spotless.</span
+                >
+                <summary
+                    >Do you offer residential and commercial window cleaning? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >For most homes, we recommend every 3–6 months. In coastal
+                    areas like Mangerton and Wollongong, salt and dust can build
+                    up faster, so quarterly cleaning keeps windows looking their
+                    best.</span
+                >
+                <summary
+                    >How often should I get my windows cleaned? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >Yes. We’re fully insured and take all safety precautions
+                    seriously, so you can have total peace of mind.</span
+                >
+                <summary
+                    >Are you fully insured? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >Absolutely. We offer non-abrasive solar panel cleaning to
+                    help your panels work more efficiently and last longer.</span
+                >
+                <summary
+                    >Do you clean solar panels too? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >You can request a free quote via our website, or give us a
+                    quick call during business hours (7AM–7PM). We make it easy
+                    to book the way that suits you best.</span
+                >
+                <summary
+                    >Can I book online or over the phone? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+        </div>
+
+        <div class="cta">
+            <p>
+                Have any other questions? Reach out and speak to a Window
+                Cleaning expert today!
+            </p>
+            <PrimaryButton
+                text="Get a Quote Now"
+                icon={messageIcon}
+                link="contact/#contact-form"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    section {
+        background-color: var(--light-blue);
+    }
+    details {
+        background-color: white;
+        padding: 1rem;
+        border-top: 1px solid var(--brand-blue);
+        line-height: 2rem;
+    }
+    summary {
+        display: flex;
+        justify-content: space-between;
+        font-family: "heading";
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+    }
+    details[open] summary {
+        margin-bottom: 1rem;
+    }
+    details[open] summary img {
+        transform: rotate(180deg);
+    }
+    .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

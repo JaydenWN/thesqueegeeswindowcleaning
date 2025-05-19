@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import simonImage from "@images/simon-window-cleaner.png";
+---
+
+<section>
+    <div class="container">
+        <h2>Meet Simon, Your Local Window Cleaning Expert</h2>
+        <p>
+            Simon, the owner and operator of The Squeegees Window Cleaning, has
+            been keeping windows spotless for over 15 years. Starting as a
+            one-man operation, Simon built a reputation in Mangerton,
+            Wollongong, and surrounding areas for delivering high-quality,
+            reliable window cleaning services.
+        </p>
+        <Image src={simonImage} alt="wollongong window cleaning professional" />
+        <p>
+            From family homes to local storefronts, he’s earned the trust of
+            countless customers by always going the extra mile. With Simon,
+            you’re not just getting a window cleaner, you’re getting a local
+            expert who takes pride in every single job.
+        </p>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+</style>

@@ -1,0 +1,78 @@
+---
+
+---
+
+<section>
+    <div class="container">
+        <h2>Contact The Squeegees Window Cleaning now</h2>
+        <p>
+            Ready to enjoy crystal-clear windows? Whether you need a one-off
+            clean or regular maintenance, we’re here to help.Based in Mangerton,
+            NSW, we proudly serve homes and businesses across Wollongong and the
+            Illawarra. Reach out today for a free, no-obligation quote. Fast,
+            friendly service is just a call or message away.
+        </p>
+        <form action="">
+            <div class="input-section">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div class="input-section">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div class="input-section">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" />
+            </div>
+            <div class="input-section">
+                <label for="message">Message</label>
+                <textarea cols="2" rows="10" name="message" id="message"
+                ></textarea>
+            </div>
+            <button>Submit Message</button>
+        </form>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    section {
+        background-color: var(--light-blue);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    input,
+    textarea {
+        font-family: "paragraph";
+        font-size: 1rem;
+        border: 0px;
+        border-top: 1px solid var(--brand-blue);
+        border-radius: 0px 0px 8px 8px;
+        padding: 0.5rem 1rem;
+    }
+    button {
+        width: fit-content;
+        border-radius: 6rem;
+        background-color: var(--turquoise);
+        padding: 0.3rem 1rem;
+        font-family: "paragraph";
+        font-size: 1rem;
+        border: 0px;
+        color: var(--text-blue);
+    }
+</style>

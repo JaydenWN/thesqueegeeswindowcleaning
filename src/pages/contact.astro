@@ -1,0 +1,19 @@
+---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import ContactContact from "../components/contact/Contact_Contact.astro";
+import ContactDirect from "../components/contact/Contact_Direct.astro";
+import ContactHours from "../components/contact/Contact_Hours.astro";
+import ContactSocials from "../components/contact/Contact_Socials.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout title="Contact" description="Lorem ipsum dolor sit amet">
+    <SubpageHero
+        title="Get in Touch with The Squeegees Window Cleaning"
+        text="Request a free quote, book a service, or ask a question. We are here to help."
+    />
+    <ContactContact />
+    <ContactHours />
+    <ContactDirect />
+    <ContactSocials />
+</Layout>

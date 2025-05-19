@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import facebookIcon from "@icons/facebook.svg";
+import instagramIcon from "@icons/instagram.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Follow our Socials</h2>
+        <p>
+            Stay up to date with the latest news, promotions, and cleaning tips
+            by following us on social media.
+        </p>
+
+        <a
+            href="https://www.facebook.com/thesqueegeeswindowcleaning"
+            class="info"
+        >
+            <Image src={facebookIcon} alt="window cleaning facebook" />
+            <p class="info-type">Facebook</p>
+            <p>Give our Facebook a like and stay up to day with Simon.</p>
+        </a>
+
+        <a href="https://www.instagram.com/t_s_w_c" class="info">
+            <Image src={instagramIcon} alt="window cleaning instagram" />
+
+            <p class="info-type">Instagram</p>
+            <p>
+                Follow us on Instagram and stay up to day with our window
+                cleaning services.
+            </p>
+        </a>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--light-blue);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--text-blue);
+    }
+    .info-type {
+        font-size: 1.25rem;
+        font-family: "heading";
+        color: var(--text-blue);
+    }
+</style>

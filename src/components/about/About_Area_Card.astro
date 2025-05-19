@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import locationIcon from "@icons/location.svg";
+
+const { title, link } = Astro.props;
+---
+
+<div>
+    <a href={link}>
+        <Image src={locationIcon} alt="window cleaning locations" />
+        {title}
+    </a>
+</div>
+
+<style>
+    div {
+        background-color: var(--light-blue);
+        font-family: "heading";
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    a {
+        display: flex;
+        gap: 1rem;
+        text-decoration: none;
+        font-size: 1.65rem;
+        color: var(--text-blue);
+        align-items: center;
+    }
+</style>

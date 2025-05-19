@@ -1,0 +1,91 @@
+---
+import PrimaryButton from "../common/Primary_Button.astro";
+import LandingServiceCard from "./Landing_Service_Card.astro";
+import windowCleaningImage from "@images/storefront-window-cleaning.jpg";
+import messageIcon from "@icons/message-tick.svg";
+import gutterCleaningImage from "@images/gutter-cleaning.jpg";
+import pressureWashingImage from "@images/pressure-washing.jpg";
+import solarCleaningImage from "@images/solar-cleaning.jpg";
+---
+
+<section>
+    <div class="container">
+        <h2>Quality Window Cleaning Services</h2>
+        <LandingServiceCard
+            image={windowCleaningImage}
+            title="Window Cleaning – Mangerton & Wollongong"
+            text="We offer professional window cleaning for homes and businesses across Mangerton, Wollongong, and the Illawarra. Whether it’s a single-storey home or a multi-level shopfront, our streak-free results and attention to detail leave your windows looking crystal clear inside and out."
+        >
+            <div class="cta">
+                <h4>Book a window cleaning today</h4>
+                <p>Get a free window cleaning quote in minutes.</p>
+                <PrimaryButton
+                    icon={messageIcon}
+                    text="Get a Quote"
+                    link="/contact/#contact-form"
+                />
+            </div>
+        </LandingServiceCard>
+
+        <LandingServiceCard
+            image={gutterCleaningImage}
+            title="Gutter Cleaning Services"
+            text="Blocked gutters can cause serious water damage. We provide safe, efficient gutter cleaning in Mangerton and nearby areas, removing leaves, dirt, and debris so rainwater flows freely. Ideal for residential and commercial roofs."
+        >
+            <div class="cta">
+                <h4>Protect your property</h4>
+                <p>Book gutter cleaning now.</p>
+                <PrimaryButton
+                    icon={messageIcon}
+                    text="Get a Quote"
+                    link="/contact/#contact-form"
+                />
+            </div>
+        </LandingServiceCard>
+
+        <LandingServiceCard
+            image={pressureWashingImage}
+            title="Pressure Washing & Soft Washing"
+            text="Refresh your outdoor spaces with our high-quality pressure cleaning. From driveways and patios to walls and facades, we remove built-up grime, mould, and stains. We also offer gentle soft washing for delicate surfaces."
+        >
+            <div class="cta">
+                <h4>Bring surfaces back to life</h4>
+                <p>Request a pressure wash today.</p>
+                <PrimaryButton
+                    icon={messageIcon}
+                    text="Get a Quote"
+                    link="/contact/#contact-form"
+                />
+            </div>
+        </LandingServiceCard>
+
+        <LandingServiceCard
+            image={solarCleaningImage}
+            title="Solar Panel Cleaning Wollongong"
+            text="Dirty solar panels lose efficiency. Our non-abrasive solar panel cleaning service ensures you get the most out of your solar setup. Ideal for homes and businesses in the Wollongong region."
+        >
+            <div class="cta">
+                <h4>Boost your solar performance</h4>
+                <p>Book a solar clean now.</p>
+                <PrimaryButton
+                    icon={messageIcon}
+                    text="Get a Quote"
+                    link="/contact/#contact-form"
+                />
+            </div>
+        </LandingServiceCard>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+</style>

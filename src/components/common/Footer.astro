@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import logo from "@images/footer-logo.png";
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-container">
+		<Image src={logo} alt="The Squeegees window cleaning" />
+		<div class="links">
+			<div class="site-nav">
+				<p>Site Navigation</p>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/services">Services</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+
+			<div class="social-media">
+				<p>Social Media</p>
+				<ul>
+					<li>
+						<a href="https://www.instagram.com/t_s_w_c"
+							>Instagram</a>
+					</li>
+					<li>
+						<a
+							href="https://www.facebook.com/thesqueegeeswindowcleaning"
+							>Facebook</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<span class="beachside">
+		&copy; {today.getFullYear()} Beachside Web Designs.
+	</span>
+</footer>
+<style>
+	footer {
+		background-color: var(--text-blue);
+		color: white;
+		box-sizing: border-box;
+		padding-bottom: 1rem;
+	}
+	.footer-container {
+		padding: 2rem;
+	}
+	.links {
+		display: flex;
+		gap: 4rem;
+		margin-top: 2rem;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	p {
+		font-family: "heading";
+		font-size: 1.25rem;
+	}
+	.beachside {
+		text-align: center;
+		width: 100%;
+		display: block;
+		font-size: 0.85rem;
+	}
+</style>

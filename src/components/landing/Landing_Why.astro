@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import whyImage from "@images/window-clean-wollongong-stadium.jpg";
+---
+
+<section>
+    <div class="container">
+        <h2>Why our Window Cleaning Service</h2>
+        <p>
+            We’re not just another window cleaning business, we’re your local,
+            reliable professionals who genuinely care about getting the job done
+            right. Our attention to detail, friendly attitude, and commitment to
+            showing up when we say we will sets us apart.
+        </p>
+        <Image
+            src={whyImage}
+            alt="Why our window service in wollongong"
+            class="image"
+        />
+        <p>
+            We take pride in delivering spotless windows, clear gutters, and
+            cleaner homes and storefronts, without the hassle. Our mobile
+            service means we come to you, on your schedule, with everything
+            needed to make your windows shine.
+        </p>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--light-blue);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .image {
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+    }
+</style>

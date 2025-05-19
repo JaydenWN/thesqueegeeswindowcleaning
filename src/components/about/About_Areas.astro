@@ -1,0 +1,52 @@
+---
+import AboutAreaCard from "./About_Area_Card.astro";
+---
+
+<section>
+    <div class="container">
+        <h2>Window Cleaning for Mangerton, Wollongong & Beyond</h2>
+        <p>
+            We’re a mobile window cleaning service based in Mangerton, NSW,
+            servicing homes and businesses throughout Wollongong and surrounding
+            areas. No job is too big or too small, from single-storey homes to
+            multi-level commercial properties, we bring our expert touch to
+            every window.
+        </p>
+
+        <div class="areas">
+            <AboutAreaCard
+                title="Mangerton"
+                link="https://maps.app.goo.gl/seWYQMzNkaC9zKdUA"
+            />
+            <AboutAreaCard
+                title="Wollongong"
+                link="https://maps.app.goo.gl/SrkeUyREWaG5G2iq6"
+            />
+            <AboutAreaCard
+                title="Figtree"
+                link="https://maps.app.goo.gl/W5tRFgVD92i7PzUG7"
+            />
+            <AboutAreaCard
+                title="Mount Keira"
+                link="https://maps.app.goo.gl/at6Y383oRktanoRZ6"
+            />
+            <AboutAreaCard
+                title="Coniston"
+                link="https://maps.app.goo.gl/3ghof3bR8DPzZhSx9"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .areas {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

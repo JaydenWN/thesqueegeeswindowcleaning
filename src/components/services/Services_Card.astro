@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import PrimaryButton from "../common/Primary_Button.astro";
+import tickIcon from "@icons/tick.svg";
+import messageIcon from "@icons/message-tick.svg";
+const { title, image, text, reasons, ctaTitle, ctaText } = Astro.props;
+---
+
+<div class="service-card">
+    <div class="service-head">
+        <h2>{title}</h2>
+        <Image src={image} alt={title} class="service-image" />
+        <p>{text}</p>
+    </div>
+
+    <div class="why">
+        <h3>Why Us</h3>
+        <ul>
+            {
+                reasons.map((reason) => (
+                    <li>
+                        <Image src={tickIcon} alt="why tick" class="tick" />{" "}
+                        {reason}
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+
+    <div class="cta">
+        <h3>{ctaTitle}</h3>
+        <p>{ctaText}</p>
+        <PrimaryButton
+            icon={messageIcon}
+            link="/"
+            text="Get a Quote"
+            link="/contact/#contact-form"
+        />
+    </div>
+</div>
+
+<style>
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .why,
+    .cta,
+    .service-head {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .service-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+    }
+    .tick {
+        width: 20px;
+        height: auto;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    li {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+</style>

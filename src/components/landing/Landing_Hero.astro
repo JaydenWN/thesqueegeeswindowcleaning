@@ -1,0 +1,61 @@
+---
+import PrimaryButton from "../common/Primary_Button.astro";
+import messageIcon from "@icons/message-tick.svg";
+import phoneIcon from "@icons/phone-blue.svg";
+import SecondaryButton from "../common/Secondary_Button.astro";
+import bgImage from "@images/window-cleaning-wollongong.png";
+import { Image } from "astro:assets";
+---
+
+<section>
+    <Image src={bgImage} alt="window cleaning wollongong" class="hero-image" />
+    <div class="container">
+        <h1>Professional Window Cleaning in Mangerton & Wollongong</h1>
+        <p>
+            Need sparkling clean windows? We offer expert mobile window cleaning
+            in Mangerton, Wollongong, and the wider Illawarra area. Whether it's
+            your home, office, or storefront, we provide affordable, streak-free
+            results every time. Book today and see the difference.
+        </p>
+        <div class="cta-buttons">
+            <SecondaryButton
+                icon={phoneIcon}
+                link="tel:0402 574 816"
+                text="Call Us"
+            />
+            <PrimaryButton
+                icon={messageIcon}
+                link="/contact/#contact-form"
+                text="Get a quote"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        position: relative;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        z-index: 2;
+        position: relative;
+        color: white;
+    }
+    h1 {
+        color: white;
+    }
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

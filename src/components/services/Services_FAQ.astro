@@ -1,0 +1,115 @@
+---
+import carrot from "@icons/carrot.svg";
+import { Image } from "astro:assets";
+import PrimaryButton from "../common/Primary_Button.astro";
+import messageIcon from "@icons/message-tick.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Window Cleaning FAQ</h2>
+        <div class="faq">
+            <details>
+                <span
+                    >Most homes benefit from a window clean every three to six
+                    months. Properties in coastal areas like Mangerton and
+                    Wollongong may need more frequent cleaning due to salt and
+                    dust buildup.
+                </span>
+                <summary
+                    >How often should I get my windows cleaned? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >Yes, we clean windows, gutters, and solar panels for homes,
+                    businesses, and multi-level properties.
+                </span>
+                <summary
+                    >Do you offer residential and commercial cleaning? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >Yes, we assess every surface before cleaning to ensure we
+                    use the right pressure and technique. We also offer soft
+                    washing for delicate surfaces.
+                </span>
+                <summary
+                    >Is pressure washing safe for my surfaces? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+
+            <details>
+                <span
+                    >Yes, we are fully insured for residential and commercial
+                    work. Your property is in safe hands.
+                </span>
+                <summary
+                    >Are you fully insured? <Image
+                        src={carrot}
+                        alt="dropdown"
+                    /></summary
+                >
+            </details>
+        </div>
+
+        <div class="cta">
+            <p>
+                Have any other questions? Reach out and speak to a Window
+                Cleaning expert today!
+            </p>
+            <PrimaryButton
+                text="Get a Quote Now"
+                icon={messageIcon}
+                link="/contact/#contact-form"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    section {
+        background-color: var(--light-blue);
+    }
+    details {
+        background-color: white;
+        padding: 1rem;
+        border-top: 1px solid var(--brand-blue);
+        line-height: 2rem;
+    }
+    summary {
+        display: flex;
+        justify-content: space-between;
+        font-family: "heading";
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+    }
+    details[open] summary {
+        margin-bottom: 1rem;
+    }
+    details[open] summary img {
+        transform: rotate(180deg);
+    }
+    .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

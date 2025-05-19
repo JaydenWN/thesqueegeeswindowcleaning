@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import tick from "@icons/tick.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Why Choose The Squeegees Window Cleaning?</h2>
+        <p>
+            We know you have options for window cleaning, but here’s why our
+            clients keep coming back:
+        </p>
+
+        <div class="reasons">
+            <div class="reason">
+                <Image src={tick} alt="window cleaning expert reason" />
+                <h3>15 Years of Experience</h3>
+                <p>Simon’s been perfecting his craft for over a decade.</p>
+            </div>
+
+            <div class="reason">
+                <Image src={tick} alt="window cleaning expert reason" />
+                <h3>Locally Owned & Operated</h3>
+                <p>You’re supporting a trusted, local business.</p>
+            </div>
+
+            <div class="reason">
+                <Image src={tick} alt="window cleaning expert reason" />
+                <h3>Attention to Detail</h3>
+                <p>Every window, every corner, every time.</p>
+            </div>
+
+            <div class="reason">
+                <Image src={tick} alt="window cleaning expert reason" />
+                <h3>Flexible Scheduling</h3>
+                <p>We work around your availability. no stress, no hassle.</p>
+            </div>
+        </div>
+
+        <h2>Your Satisfaction, Guaranteed</h2>
+        <p>
+            We’re not happy until you’re happy. That’s why we go the extra mile
+            to deliver spotless, streak-free results every time. If you’re not
+            100% satisfied, we’ll make it right.
+        </p>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--light-blue);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .reasons {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-bottom: 4rem;
+    }
+    .reason {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        text-align: center;
+    }
+</style>

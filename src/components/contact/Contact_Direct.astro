@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section>
+    <div class="container">
+        <h2>Contact Simon Directly</h2>
+        <p>
+            Have a question or need a quick response? Reach out to Simon
+            directly for fast, friendly service.
+        </p>
+
+        <div class="info">
+            <p class="info-type">Email</p>
+            <p>simon.thesqueegees@gmail.com</p>
+        </div>
+
+        <div class="info">
+            <p class="info-type">Phone</p>
+            <p>0402 574 816</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+    .info-type {
+        font-size: 1.25rem;
+        font-family: "heading";
+        color: var(--text-blue);
+    }
+</style>

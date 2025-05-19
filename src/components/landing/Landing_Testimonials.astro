@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+import stars from "@icons/stars.svg";
+import rightIcon from "@icons/right.svg";
+import leftIcon from "@icons/left.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>
+            What our clients say about our Window Cleaning Services What our
+            clients say about our Window Cleaning Services
+        </h2>
+    </div>
+
+    <div class="testimonial-carousel">
+        <div class="embla">
+            <div class="embla__container">
+                <div class="embla__slide">
+                    <div class="testimonial-card">
+                        <div class="text">
+                            <h3>Very Impressed</h3>
+                            <Image src={stars} alt="star rating" />
+                            <blockquote>
+                                These guys are amazing! Simon kindly squeezed me
+                                in to a busy day (as someone else cancelled on
+                                me last minute) - and it was the last day of my
+                                lease in my clinic. The windows were very dirty
+                                and lots of cobwebs etc… after the clean they
+                                looked absolutely incredible! They have never
+                                looked so nice, I wish I had found Squeegees
+                                earlier! So much focus and care was given by
+                                both men into the job, I can tell they are both
+                                perfectionists and it shows in the impressive
+                                end result.
+                            </blockquote>
+                        </div>
+                        <span>- Jodie Stewart</span>
+                    </div>
+                </div>
+
+                <div class="embla__slide">
+                    <div class="testimonial-card">
+                        <div class="text">
+                            <h3>Sparking Windows</h3>
+                            <Image src={stars} alt="star rating" />
+                            <blockquote>
+                                Simon has been doing our windows for our home
+                                and our Airbnb for 5+ years. He always takes
+                                great pride in doing the best job. He is always
+                                punctual and communication before his arrival is
+                                always excellent. I would not hesitate in
+                                recommending him to keep your windows sparkling
+                                clean.
+                            </blockquote>
+                        </div>
+                        <span>- Merrilyn Glaister</span>
+                    </div>
+                </div>
+
+                <div class="embla__slide">
+                    <div class="testimonial-card">
+                        <div class="text">
+                            <h3>Highly Recommend</h3>
+                            <Image src={stars} alt="star rating" />
+                            <blockquote>
+                                Simon is always prompt and responds to all
+                                communication. His window cleaning service is
+                                exceptional. I have extremely difficult areas
+                                included balconies with louvre windows, wrap
+                                around balcony glass handrails and windows with
+                                difficult access. He efficiently cleans all of
+                                them. I would highly recommend The Squeegees
+                                Window Cleaning.
+                            </blockquote>
+                        </div>
+                        <span>- Maria Fairweather</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-buttons">
+            <button class="embla__prev" aria-label="Previous testimonial"
+                ><Image src={leftIcon} alt="previous" /></button
+            >
+            <button class="embla__next" aria-label="Next testimonial"
+                ><Image src={rightIcon} alt="next" /></button
+            >
+        </div>
+    </div>
+</section>
+
+<style>
+    .embla {
+        overflow: hidden;
+    }
+    .embla__container {
+        display: flex;
+    }
+    .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .testimonial-card {
+        border-radius: 8px;
+        background-color: var(--brand-blue);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .text {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    span {
+        background-color: var(--text-blue);
+        width: 100%;
+        color: white;
+        padding: 1rem;
+        text-align: right;
+        box-sizing: border-box;
+        border-radius: 0px 0px 8px 8px;
+    }
+    .carousel-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    button {
+        width: 35px;
+        height: 35px;
+        background-color: var(--brand-blue);
+        border: 0px;
+        border-radius: 50%;
+    }
+</style>
+
+<script>
+    import EmblaCarousel from "embla-carousel";
+
+    document.addEventListener("astro:page-load", () => {
+        const emblaNode = document.querySelector(".embla");
+        if (!emblaNode) return;
+        const prevBtn = document.querySelector(".embla__prev");
+        const nextBtn = document.querySelector(".embla__next");
+        const embla = EmblaCarousel(emblaNode, { loop: false, align: "start" });
+
+        prevBtn.addEventListener("click", () => embla.scrollPrev());
+        nextBtn.addEventListener("click", () => embla.scrollNext());
+    });
+</script>

@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import jobImage from "@images/wollongong-window-cleaning-team.jpg";
+---
+
+<section>
+    <div class="container">
+        <div class="meet-section">
+            <h2>Meet Your Trusted Window Cleaners in WOLLONGONG</h2>
+            <Image
+                src={jobImage}
+                alt="Meet the Wollongong Window Cleaning Team"
+                class="image"
+            />
+            <p>
+                The Squeegees is a locally owned and operated mobile window
+                cleaning business based in Mangerton, NSW 2500. We proudly serve
+                residential and commercial clients throughout Wollongong, the
+                Illawarra region, and beyond, bringing clarity to every window
+                we touch.
+            </p>
+        </div>
+        <div class="mission-section">
+            <h3>Our Window Cleaning Mission</h3>
+            <p>
+                Our mission is simple: deliver spotless, streak-free windows
+                with honesty, reliability, and genuine care. Whether it’s a
+                family home or a storefront, we show up on time, work hard, and
+                make every window shine like new.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .meet-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

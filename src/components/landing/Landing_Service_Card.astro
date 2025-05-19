@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+const { title, text, image } = Astro.props;
+---
+
+<div class="service-card">
+    <Image src={image} alt={title} class="service-image" />
+    <h3>{title}</h3>
+    <p>{text}</p>
+    <slot />
+</div>
+
+<style>
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    p {
+        padding-top: 1rem;
+        border-top: 2px solid var(--brand-blue);
+    }
+</style>

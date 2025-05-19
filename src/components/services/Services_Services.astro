@@ -1,0 +1,71 @@
+---
+import ServicesCard from "./Services_Card.astro";
+import windowCleaningImage from "@images/storefront-window-cleaning.jpg";
+import gutterCleaningImage from "@images/gutter-cleaning.jpg";
+import pressureWashingImage from "@images/pressure-washing.jpg";
+import solarCleaningImage from "@images/solar-cleaning.jpg";
+---
+
+<section>
+    <div class="container">
+        <ServicesCard
+            title="Window Cleaning – Mangerton & Wollongong"
+            image={windowCleaningImage}
+            text="Our window cleaning service leaves your windows sparkling clean, inside and out. We handle everything from single-storey homes to multi-level commercial buildings. Using professional-grade equipment, we remove dust, dirt, and grime for a spotless finish every time."
+            reasons={[
+                "Over 15 years of experience",
+                "Attention to detail on every job",
+                "Attention to detail on every job",
+            ]}
+            ctaTitle="Book a window cleaning today"
+            ctaText="Get a free quote in minutes."
+        />
+
+        <ServicesCard
+            title="Gutter Cleaning"
+            image={gutterCleaningImage}
+            text="Blocked gutters can lead to serious water damage. Our gutter cleaning service ensures rainwater flows freely by removing leaves, debris, and dirt. We handle all roof types, from residential homes to commercial properties."
+            reasons={[
+                "Prevent costly water damage",
+                "Safe and effective service",
+                "Free quotes available",
+            ]}
+            ctaTitle="Protect your property"
+            ctaText="Book gutter cleaning now."
+        />
+
+        <ServicesCard
+            title="Pressure Washing and Soft Washing"
+            image={pressureWashingImage}
+            text="Revitalize your outdoor surfaces with our pressure washing and soft washing services. We use powerful cleaning techniques to remove built-up dirt, moss, and grime from driveways, patios, and facades. For delicate surfaces, we offer a gentle soft wash that cleans without causing damage."
+            reasons={[
+                "Restore the look of your property",
+                "Safe for all surfaces",
+                "Experienced and fully insured",
+            ]}
+            ctaTitle="Bring surfaces back to life"
+            ctaText="Request a pressure wash today."
+        />
+
+        <ServicesCard
+            title="Solar Panel Cleaning"
+            image={solarCleaningImage}
+            text="Dirty solar panels can reduce efficiency. Our solar panel cleaning service removes dirt and debris to keep your panels performing at their best. We use non-abrasive cleaning methods to prevent scratches and maintain peak efficiency."
+            reasons={[
+                "Protect your investment",
+                "Boost solar output",
+                "Eco-friendly cleaning methods",
+            ]}
+            ctaTitle="Boost your solar performance"
+            ctaText="Book a solar panel clean now."
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    }
+</style>
