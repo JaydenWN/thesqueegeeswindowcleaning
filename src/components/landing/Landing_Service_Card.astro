@@ -27,4 +27,32 @@ const { title, text, image } = Astro.props;
         padding-top: 1rem;
         border-top: 2px solid var(--brand-blue);
     }
+    @media (min-width: 768px) {
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "image title"
+                "image text-content"
+                "image slot";
+        }
+        .service-image {
+            grid-area: image;
+        }
+        h3 {
+            grid-area: title;
+        }
+        p {
+            grid-area: text-content;
+        }
+        slot {
+            grid-area: slot;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .service-card {
+            gap: 4rem;
+        }
+    }
 </style>

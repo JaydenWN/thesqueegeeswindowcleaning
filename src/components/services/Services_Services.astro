@@ -3,7 +3,8 @@ import ServicesCard from "./Services_Card.astro";
 import windowCleaningImage from "@images/storefront-window-cleaning.jpg";
 import gutterCleaningImage from "@images/gutter-cleaning.jpg";
 import pressureWashingImage from "@images/pressure-washing.jpg";
-import solarCleaningImage from "@images/solar-cleaning.jpg";
+import solarCleaningImage from "@images/solar-cleaning.png";
+import skylightImage from "@images/sky-light-window-washing.png";
 ---
 
 <section>
@@ -58,6 +59,19 @@ import solarCleaningImage from "@images/solar-cleaning.jpg";
             ]}
             ctaTitle="Boost your solar performance"
             ctaText="Book a solar panel clean now."
+        />
+
+        <ServicesCard
+            title="Skylight Window Washing"
+            image={skylightImage}
+            text="Skylights brighten your space, but only when they’re clean. Our skylight window washing service safely removes dirt, grime, bird droppings, and water stains from hard-to-reach glass panels. We clean both flat and domed skylights using professional equipment that protects your roof and delivers streak-free results. Available for homes and businesses across Mangerton, Wollongong, and surrounding suburbs."
+            reasons={[
+                "Safe and professional roof access",
+                "Streak-free cleaning with proper equipment",
+                "Local expert with 15 years of experience",
+            ]}
+            ctaTitle="Let more sun in"
+            ctaText="Book a skylight wash now."
         />
     </div>
 </section>

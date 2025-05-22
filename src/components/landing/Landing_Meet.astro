@@ -53,4 +53,26 @@ import jobImage from "@images/wollongong-window-cleaning-team.jpg";
         flex-direction: column;
         gap: 1rem;
     }
+    @media (min-width: 768px) {
+        .meet-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "image text-content";
+        }
+        .meet-section h2 {
+            grid-area: title;
+            margin-bottom: 2rem;
+        }
+        .image {
+            grid-area: image;
+        }
+        .meet-section p {
+            grid-area: text-content;
+        }
+        .container {
+            gap: 6rem;
+        }
+    }
 </style>

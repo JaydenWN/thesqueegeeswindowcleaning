@@ -13,7 +13,11 @@ import simonImage from "@images/simon-window-cleaner.png";
             Wollongong, and surrounding areas for delivering high-quality,
             reliable window cleaning services.
         </p>
-        <Image src={simonImage} alt="wollongong window cleaning professional" />
+        <Image
+            src={simonImage}
+            alt="wollongong window cleaning professional"
+            class="image"
+        />
         <p>
             From family homes to local storefronts, he’s earned the trust of
             countless customers by always going the extra mile. With Simon,
@@ -28,5 +32,28 @@ import simonImage from "@images/simon-window-cleaner.png";
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            gap: 4rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "first image"
+                "second second";
+        }
+        .container h2 {
+            grid-area: title;
+        }
+        .container p:first-of-type {
+            grid-area: first;
+        }
+        .container p:last-of-type {
+            grid-area: second;
+        }
+        .image {
+            grid-area: image;
+        }
     }
 </style>

@@ -37,4 +37,28 @@ import { Image } from "astro:assets";
         font-family: "heading";
         color: var(--text-blue);
     }
+
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            gap: 4rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "text-content text-content"
+                "email phone";
+        }
+        .container h2 {
+            grid-area: title;
+        }
+        .container p {
+            grid-area: text-content;
+        }
+        .info:first-of-type {
+            grid-area: email;
+        }
+        .info:last-of-type {
+            grid-area: phone;
+        }
+    }
 </style>

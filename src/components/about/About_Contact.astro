@@ -7,10 +7,11 @@
         <h2>Contact The Squeegees Window Cleaning now</h2>
         <p>
             Ready to enjoy crystal-clear windows? Whether you need a one-off
-            clean or regular maintenance, we’re here to help.Based in Mangerton,
-            NSW, we proudly serve homes and businesses across Wollongong and the
-            Illawarra. Reach out today for a free, no-obligation quote. Fast,
-            friendly service is just a call or message away.
+            clean or regular maintenance, we’re here to help. Based in
+            Mangerton, NSW, we proudly serve homes and businesses across
+            Wollongong and the Illawarra. Reach out today for a free,
+            no-obligation quote. Fast, friendly service is just a call or
+            message away.
         </p>
         <form action="">
             <div class="input-section">
@@ -71,5 +72,26 @@
         font-size: 1rem;
         border: 0px;
         color: var(--text-blue);
+    }
+    @media (min-width: 1024px) {
+        .container h2 {
+            grid-area: title;
+        }
+        .container p {
+            grid-area: p;
+        }
+        form {
+            grid-area: form;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 0.75fr 1fr;
+            grid-template-areas:
+                "title title"
+                "p form";
+        }
+        button {
+            cursor: pointer;
+        }
     }
 </style>

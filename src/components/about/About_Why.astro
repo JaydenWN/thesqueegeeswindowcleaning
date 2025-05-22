@@ -68,4 +68,30 @@ import tick from "@icons/tick.svg";
         align-items: center;
         text-align: center;
     }
+    @media (min-width: 768px) {
+        .container {
+            gap: 4rem;
+        }
+        .reason {
+            gap: 2rem;
+        }
+        .reasons {
+            gap: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            gap: 6rem;
+        }
+        .reasons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+        .reason {
+            box-sizing: border-box;
+            width: calc(50% - 2rem);
+        }
+    }
 </style>

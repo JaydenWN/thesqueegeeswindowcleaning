@@ -5,7 +5,8 @@ import windowCleaningImage from "@images/storefront-window-cleaning.jpg";
 import messageIcon from "@icons/message-tick.svg";
 import gutterCleaningImage from "@images/gutter-cleaning.jpg";
 import pressureWashingImage from "@images/pressure-washing.jpg";
-import solarCleaningImage from "@images/solar-cleaning.jpg";
+import solarCleaningImage from "@images/solar-cleaning.png";
+import skylightImage from "@images/sky-light-window-washing.png";
 ---
 
 <section>
@@ -74,6 +75,22 @@ import solarCleaningImage from "@images/solar-cleaning.jpg";
                 />
             </div>
         </LandingServiceCard>
+
+        <LandingServiceCard
+            image={skylightImage}
+            title="Skylight Window Washing Wollongong"
+            text="Skylights can be tricky to clean, but we make it easy. Our skylight window washing service removes dirt, dust, leaves, and water stains from hard-to-reach glass panels. Whether your skylight is flat or domed, we use safe equipment and streak-free techniques to restore clarity and let the natural light shine through. Available for both residential and commercial properties across Mangerton and Wollongong."
+        >
+            <div class="cta">
+                <h4>Let the light in</h4>
+                <p>Book a skylight window wash today.</p>
+                <PrimaryButton
+                    icon={messageIcon}
+                    text="Get a Quote"
+                    link="/contact/#contact-form"
+                />
+            </div>
+        </LandingServiceCard>
     </div>
 </section>
 
@@ -87,5 +104,10 @@ import solarCleaningImage from "@images/solar-cleaning.jpg";
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+    }
+    @media (min-width: 768px) {
+        .container {
+            gap: 12rem;
+        }
     }
 </style>

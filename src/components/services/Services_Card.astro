@@ -72,4 +72,65 @@ const { title, image, text, reasons, ctaTitle, ctaText } = Astro.props;
         gap: 0.5rem;
         align-items: center;
     }
+
+    @media (min-width: 768px) {
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "head head"
+                "why cta";
+            border: 1px solid var(--light-blue);
+            padding: 2rem;
+            background-color: var(--light-blue);
+            border-radius: 8px;
+        }
+
+        .service-head {
+            grid-area: head;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "image text-content";
+            gap: 2rem;
+        }
+        .service-head h2 {
+            grid-area: title;
+        }
+        .service-image {
+            grid-area: image;
+        }
+        .service-head p {
+            grid-area: text-content;
+        }
+        .why {
+            grid-area: why;
+        }
+        .cta {
+            grid-area: cta;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 1rem;
+        }
+        ul {
+            gap: 2rem;
+        }
+        li {
+            line-height: 1.65rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .service-card {
+            padding: 4rem;
+            gap: 4rem;
+        }
+        .service-head {
+            gap: 2rem;
+        }
+    }
 </style>

@@ -40,4 +40,34 @@ import whyImage from "@images/window-clean-wollongong-stadium.jpg";
         width: 100%;
         height: auto;
     }
+
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "text-one text-one"
+                " image text-two";
+            gap: 3rem;
+        }
+        .container h2 {
+            grid-area: title;
+        }
+        .container p:first-of-type {
+            grid-area: text-one;
+            width: 75%;
+        }
+        .container p:last-of-type {
+            grid-area: text-two;
+        }
+        .image {
+            grid-area: image;
+        }
+    }
+    @media (min-width: 1024px) {
+        .container {
+            gap: 4rem;
+        }
+    }
 </style>

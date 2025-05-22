@@ -55,4 +55,35 @@ import instagramIcon from "@icons/instagram.svg";
         font-family: "heading";
         color: var(--text-blue);
     }
+
+    @media (min-width: 768px) {
+        .info {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "text-content text-content"
+                "facebook instagram";
+        }
+        .container h2 {
+            grid-area: title;
+        }
+        .container p {
+            grid-area: text-content;
+        }
+        .info:first-of-type {
+            grid-area: facebook;
+        }
+        .info:last-of-type {
+            grid-area: instagram;
+        }
+    }
 </style>

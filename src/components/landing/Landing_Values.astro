@@ -10,32 +10,38 @@ import { Image } from "astro:assets";
     <div class="container">
         <h2>The Squeegees Window Cleaning Values</h2>
 
-        <div class="value">
-            <Image src={honestyIcon} alt="honest window cleaning" />
-            <h3>Honesty</h3>
-            <p>We provide honest quotes, honest advice, and honest results.</p>
-        </div>
+        <div class="values">
+            <div class="value">
+                <Image src={honestyIcon} alt="honest window cleaning" />
+                <h3>Honesty</h3>
+                <p>
+                    We provide honest quotes, honest advice, and honest results.
+                </p>
+            </div>
 
-        <div class="value">
-            <Image src={reliabilityIcon} alt="honest window cleaning" />
-            <h3>Reliability</h3>
-            <p>We show up when we say we will, every time.</p>
-        </div>
+            <div class="value">
+                <Image src={reliabilityIcon} alt="honest window cleaning" />
+                <h3>Reliability</h3>
+                <p>We show up when we say we will, every time.</p>
+            </div>
 
-        <div class="value">
-            <Image src={qualityIcon} alt="honest window cleaning" />
-            <h3>Quality</h3>
-            <p>
-                We’re detail-focused and don’t leave until the job’s done right.
-            </p>
-        </div>
+            <div class="value">
+                <Image src={qualityIcon} alt="honest window cleaning" />
+                <h3>Quality</h3>
+                <p>
+                    We’re detail-focused and don’t leave until the job’s done
+                    right.
+                </p>
+            </div>
 
-        <div class="value">
-            <Image src={prideIcon} alt="honest window cleaning" />
-            <h3>Pride</h3>
-            <p>
-                We’re detail-focused and don’t leave until the job’s done right.
-            </p>
+            <div class="value">
+                <Image src={prideIcon} alt="honest window cleaning" />
+                <h3>Pride</h3>
+                <p>
+                    We’re detail-focused and don’t leave until the job’s done
+                    right.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -46,11 +52,43 @@ import { Image } from "astro:assets";
         flex-direction: column;
         gap: 6rem;
     }
+    .values {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
     .value {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         text-align: center;
         align-items: center;
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            text-align: center;
+        }
+        p {
+            width: 300px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2 {
+            text-align: left;
+        }
+        .values {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+        p {
+            width: fit-content;
+        }
+        .value {
+            width: calc(50% - 2rem);
+            box-sizing: border-box;
+        }
     }
 </style>

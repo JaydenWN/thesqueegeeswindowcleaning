@@ -49,4 +49,24 @@ import AboutAreaCard from "./About_Area_Card.astro";
         flex-direction: column;
         gap: 1rem;
     }
+
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            gap: 4rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "text-content areas";
+        }
+        .container h2 {
+            grid-area: title;
+        }
+        .container p {
+            grid-area: text-content;
+        }
+        .areas {
+            grid-area: areas;
+        }
+    }
 </style>

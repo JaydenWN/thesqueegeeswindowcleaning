@@ -75,4 +75,25 @@
         border: 0px;
         color: var(--text-blue);
     }
+    @media (min-width: 1024px) {
+        .container {
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            grid-template-areas:
+                "title title"
+                "p form";
+        }
+        .container h2 {
+            grid-area: title;
+        }
+        .container p {
+            grid-area: p;
+        }
+        form {
+            grid-area: form;
+        }
+        button {
+            cursor: pointer;
+        }
+    }
 </style>
