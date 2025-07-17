@@ -173,6 +173,10 @@ p {
 	padding: 2rem 1rem;
 }
 
+strong{
+	font-weight: bold;
+}
+
 @media (min-width: 768px) {
 	.container {
 		padding: 6rem 4rem;
