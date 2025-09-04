@@ -36,6 +36,54 @@ const today = new Date();
 					</li>
 				</ul>
 			</div>
+
+			<div class="locations">
+				<p>Our Service Locations</p>
+				<ul>
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=Mangerton+NSW+Australia"
+							target="_blank"
+							rel="noopener noreferrer">Mangerton</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=Wollongong+NSW+Australia"
+							target="_blank"
+							rel="noopener noreferrer">Wollongong</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=Figtree+NSW+Australia"
+							target="_blank"
+							rel="noopener noreferrer">Figtree</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=Mount+Keira+NSW+Australia"
+							target="_blank"
+							rel="noopener noreferrer">Mount Keira</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=Coniston+NSW+Australia"
+							target="_blank"
+							rel="noopener noreferrer">Coniston</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=Illawarra+NSW+Australia"
+							target="_blank"
+							rel="noopener noreferrer">Illawarra Wide</a
+						>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<span class="beachside">
@@ -54,6 +102,7 @@ const today = new Date();
 	}
 	.links {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 4rem;
 		margin-top: 2rem;
 	}
@@ -75,6 +124,10 @@ const today = new Date();
 		width: 100%;
 		display: block;
 		font-size: 0.85rem;
+	}
+	.locations ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 	@media (min-width: 768px) {
 		.footer-container {
